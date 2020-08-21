@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ITodoList } from ".";
 import { ITodo } from "./TodoList.type";
 
@@ -36,14 +36,8 @@ function TodoItem({ todo, selectedList, setselectedList }: TodoItemProps) {
   );
 }
 
-function TodoList({ selectedList, setselectedList, alerting }: ITodoList) {
+function TodoList({ selectedList, setselectedList }: ITodoList) {
   console.log("render TodoList");
-
-  useEffect(() => {
-    if (alerting) {
-      console.log("Attention alert après 2 secondes");
-    }
-  }, [alerting]);
 
   return (
     <ul className="todolist">

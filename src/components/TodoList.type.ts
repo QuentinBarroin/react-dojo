@@ -14,5 +14,4 @@ export interface ITodo {
 export interface ITodoList {
   selectedList: ITodo[];
   setselectedList: React.Dispatch<React.SetStateAction<ITodo[]>>;
-  alerting: boolean;
 }
